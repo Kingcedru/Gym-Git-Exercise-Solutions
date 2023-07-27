@@ -279,3 +279,260 @@ nothing to commit, working tree clean
 
 The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
 $
+
+## Bundle 2
+
+### Exercise 1
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked fild" to track)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git stash list
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git add home.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git status
+On branch dev
+Changes to be committed:
+
+
+IP on dev: e7d8811 init project
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git stash list
+stash@{0}: WIP on dev: e7d8811 init proje
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git add about.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git stash
+Saved working directory and index state W project
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git stash list
+stash@{0}: WIP on dev: e7d8811 init project
+stash@{1}: WIP on dev: e7d8811 init project
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in 
+what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)      
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git add team.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git stash
+Saved working directory and index state WIP on dev: e7d8811 init project
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git stash list
+stash@{0}: WIP on dev: e7d8811 init project
+stash@{1}: WIP on dev: e7d8811 init project
+stash@{2}: WIP on dev: e7d8811 init project
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (4bb5a7b7c014c4ed5d8bbb1216069603ca91abe0)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git stash list
+stash@{0}: WIP on dev: e7d8811 init project
+stash@{1}: WIP on dev: e7d8811 init project
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (b336c092ea2c62af44ae13db313f7b6ef006a251)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git add .
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ \git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git commit -m "setup"
+[dev 5a4b293] setup
+ 2 files changed, 22 insertions(+)       
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev   
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git push --set-upstream origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads  
+Compressing objects: 100% (4/4), done.   
+Writing objects: 100% (4/4), 542 bytes | 
+180.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+   e7d8811..5a4b293  dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+nothing to commit, working tree clean
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git stash list
+stash@{0}: WIP on dev: e7d8811 init proje
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git stash pop stash@{0}
+On branch dev
+Your branch is up to date with 'origin/de
+
+Changes to be committed:
+  (use "git restore --staged <file>..." t
+        new file:   team.html
+
+Dropped stash@{0} (ad54e026eb564c864464fc
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git rest --hard
+git: 'rest' is not a git command. See 'gi
+
+The most similar commands are
+        restore
+        reset
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+v'.
+
+        new file:   team.html
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop
+$ git reset --hard
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in 
+what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)      
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git add service.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git stash
+Saved working directory and index state WIP on ft/bundle-2: 5a4b293 setup
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git stash pop
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   service.html
+
+Dropped refs/stash@{0} (23efda7c71e26ed3ebb466f554aae2b4e9814db7)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   service.html
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git add service.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git commit -m "create service page"
+[ft/bundle-2 18a1648] create service page 1 file changed, 11 insertions(+)        
+ create mode 100644 service.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads  
+Compressing objects: 100% (3/3), done.   
+Writing objects: 100% (3/3), 455 bytes | 
+455.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Kingcedru/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git     
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.        
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/bundle-2)        
+$
