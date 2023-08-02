@@ -822,3 +822,244 @@ The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
 $ git checkout ft/service-redesign
 Switched to branch 'ft/service-redesign'
 Your branch is up to date with 'origin/ft/service-redesign'.
+
+## Bundle 3
+
+### Exercise 1
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/home-page-rede
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 4 different commits each, respectively.  
+  (use "git pull" to merge the remote branch into yours)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D test ft/team-page
+error: branch 'test' not found.
+Deleted branch ft/team-page (was ea12495).
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D  ft/team-page
+error: branch 'ft/team-page' not found.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D ft/team-page
+error: branch 'ft/team-page' not found.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D ft/contact-page
+Deleted branch ft/contact-page (was 486db4a).
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git push origin --delete ft/contact-page
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+ - [deleted]         ft/contact-page
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D ft/team-page
+error: branch 'ft/team-page' not found.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D ft/team-page
+error: branch 'ft/team-page' not found.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D  ft/team-page
+error: branch 'ft/team-page' not found.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git push origin --delete ft/team-page
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+ - [deleted]         ft/team-page
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git branch -D ft/faq-page
+Deleted branch ft/faq-page (was 7d43622).
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)                                  it (main)
+$ git checkout  -b ft/team-page
+Switched to a new branch 'ft/team-page'    
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)it (ft/team-page)
+$ git add team.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to 
+unstage)
+        new file:   team.html
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)
+$ git commit -m "team page"
+[ft/team-page 6585e4e] team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has 
+no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.      
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)    
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 437 bytes | 437.00 KiB/s, done.    
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local objt.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by viting:
+remote:      https://github.com/Kingcedru/Gym-Git-Exercise-Solutns/pull/new/ft/team-page
+remote:
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git  
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.    
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)    
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 4 different commits each, respectively.  
+  (use "git pull" to merge the remote branch into yours)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page) 
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)    
+$ git log
+commit 6585e4e27ea03c7aabbf03cd2039771ae77326b2 (HEAD -> ft/teamage, origin/ft/team-page)
+Author: cedrick byishimo <byishimocedrick@gmail.com>
+Date:   Wed Aug 2 11:07:33 2023 +0200
+
+    team page
+
+commit 00b5e5fd2e5cfb6c47c3b94b5e341b97e160bbdb (main, ft/contacpage)
+Author: cedrick byishimo <byishimocedrick@gmail.com>
+Date:   Tue Aug 1 12:34:24 2023 +0200
+
+    changes
+
+commit cb199f7ee832dc8d1e991a522d9be26af1f06390
+Author: cedrick byishimo <byishimocedrick@gmail.com>
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git cherry-pick 6585e4e27ea03c7aabbf03cd2039771ae77326b21~
+fatal: bad revision '6585e4e27ea03c7aabbf03cd2039771ae77326b21~'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git cherry-pick 6585e4e27ea03c7aabbf03cd2039771ae77326b21
+fatal: bad revision '6585e4e27ea03c7aabbf03cd2039771ae77326b21'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git cherry-pick cb199f7ee832dc8d1e991a522d9be26af1f063901~
+fatal: bad revision 'cb199f7ee832dc8d1e991a522d9be26af1f063901~'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git cherry-pick cb199f7ee832dc8d1e991a522d9be26af1f063901
+/git (ft/contact-page)                   1a522d9be26af1f063901' 
+$ git cherry-pick 6585e4e27ea03c7aabbf03cd2039771ae77326b                         /git (ft/contact-page) 
+[ft/contact-page de222bb] team page      d2039771ae77326b       
+ Date: Wed Aug 2 11:07:33 2023 +0200     
+ 1 file changed, 11 insertions(+)        
+ create mode 100644 team.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)                   /git (ft/contact-page) 
+$ git add .
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git commit -m "contact page"
+[ft/contact-page 0150327] contact page
+ 1 file changed, 11 insertions(+)        
+ create mode 100644 contact.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads  
+Compressing objects: 100% (6/6), done.   
+Writing objects: 100% (6/6), 705 bytes | 
+705.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:        
+remote:      https://github.com/Kingcedru/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+branch 'ft/contact-page' set up to track xercise-Solutions.git  
+'origin/ft/contact-page'.                t/contact-page
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/faq-page)
+$ git add .
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/faq-page)
+$ git commit -m "faq page"
+[ft/faq-page d8fc02d] faq page   
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html     
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 431 bytes | 431.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Kingcedru/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
