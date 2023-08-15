@@ -1541,3 +1541,55 @@ Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Kingcedru/git-cafe-exercise.git
    f0f06d2..05db3be  menu -> menu
+
+### Exercise 2
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (menu)
+$ git checkout -b bugFix
+Switched to a new branch 'bugFix'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git status
+On branch bugFix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git add index-4.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git commit -m "changed title"
+[bugFix 2c1de34] changed title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git push
+fatal: The current branch bugFix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bugFix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git push --set-upstream origin bugFix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bugFix' on GitHub by visiting:
+remote:      https://github.com/Kingcedru/git-cafe-exercise/pull/new/bugFix
+remote:
+To https://github.com/Kingcedru/git-cafe-exercise.git
+ * [new branch]      bugFix -> bugFix
+branch 'bugFix' set up to track 'origin/bugFix'.
