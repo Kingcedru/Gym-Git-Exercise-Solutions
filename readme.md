@@ -1492,3 +1492,52 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/Kingcedru/git-cafe-exercise.git
    d1d3f9c..f0f06d2  main -> main
 
+## BUndle 6
+### Exercise 1
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (ft/menu)
+$ git checkout -b menu
+Switched to a new branch 'menu'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (menu)
+$ git push
+fatal: The current branch menu has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin menu
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (menu)
+$ git push --set-upstream origin menu
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'menu' on GitHub by visiting:
+remote:      https://github.com/Kingcedru/git-cafe-exercise/pull/new/menu
+remote:
+To https://github.com/Kingcedru/git-cafe-exercise.git
+ * [new branch]      menu -> menu
+branch 'menu' set up to track 'origin/menu'.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (menu)
+$ git add menu.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (menu)
+$ git commit -m 'menu page'
+[menu 05db3be] menu page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (menu)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 439 bytes | 439.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Kingcedru/git-cafe-exercise.git
+   f0f06d2..05db3be  menu -> menu
