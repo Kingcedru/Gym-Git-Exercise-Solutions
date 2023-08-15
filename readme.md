@@ -1593,3 +1593,38 @@ remote:
 To https://github.com/Kingcedru/git-cafe-exercise.git
  * [new branch]      bugFix -> bugFix
 branch 'bugFix' set up to track 'origin/bugFix'.
+
+### Exercise 3
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git status
+On branch bugFix
+Your branch is up to date with 'origin/bugFix'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git add index-4.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git commit -m "changed contacts"
+[bugFix fa043c7] changed contacts
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git-cafe-exercise (bugFix)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kingcedru/git-cafe-exercise.git
+   2c1de34..fa043c7  bugFix -> bugFix
+
