@@ -1183,3 +1183,77 @@ $ git push
 Everything up-to-date
 
 The gym@DESKTOP
+
+## Bundle 4
+### Exercise 1
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git checkout main
+Already on 'main'
+Your branch and 'origin/main' have diverged,
+and have 2 and 4 different commits each, respectively.  
+  (use "git pull" to merge the remote branch into yours)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git remotes add git-copy https://github.com/Kingcedru/Gym-Git-Exercise-Solutions-cloned.git
+git: 'remotes' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git remote
+git-copy
+origin
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 4 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)        
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)    
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git add .
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/Desktop/git (main)
+$ git commit -m "add icon"
+[main c5b9a8d] add icon
+ 1 file changed, 1 insertion(+)
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
+$ git push
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 883 bytes | 883.00 KiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+   c89d879..225c72c  main -> main
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
+$ git push git-copy
+Enumerating objects: 54, done.
+Counting objects: 100% (54/54), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (49/49), done.
+Writing objects: 100% (54/54), 14.61 KiB | 2.09 MiB/s, done.
+Total 54 (delta 23), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (23/23), done.
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions-cloned.git
+ * [new branch]      main -> main
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
+$ git push origin
+Everything up-to-date
+
