@@ -1257,3 +1257,117 @@ The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
 $ git push origin
 Everything up-to-date
 
+## Bundle 4
+### Exercise 2
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
+$ git checkout ft/footer
+error: pathspec 'ft/footer' did not match any file(s) known to git
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$ git add footer.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$ git commit -m "footer.html first commit"
+[ft/footer ba55063] footer.html first commit
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$ git add footer.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$ git commit -m "footer.html second commit"
+[ft/footer cb25d5c] footer.html second commit
+ 1 file changed, 3 insertions(+)
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$  git push --set-upstream origin ft/footer
+Enumerating objects: 30, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (21/21), 6.47 KiB | 1.62 MiB/s, done.
+Total 21 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Kingcedru/Gym-Git-Exercise-Solutions/pull/new/ft
+/footer
+remote:
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (main)
+$ git checkout -b ft/sqashing
+Switched to a new branch 'ft/sqashing'
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/sqashing)
+$ git merge --squash ft/footer
+Updating 225c72c..cb25d5c
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 footer.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/sqashing)
+$ git commit -m "footer changes squashing"
+[ft/sqashing febedbb] footer changes squashing
+ 1 file changed, 14 insertions(+)
+ create mode 100644 footer.html
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/sqashing)
+$ git push
+fatal: The current branch ft/sqashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/sqashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/sqashing)
+$ ^[[200~
+bash: $'\E[200~': command not found
+
+The gym@DESKTOP-KAP26A5 MINGW64 ~/desktop/git (ft/sqashing)
+$ git push --set-upstream origin ft/sqashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 472.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/sqashing' on GitHub by visiting:
+remote:      https://github.com/Kingcedru/Gym-Git-Exercise-Solutions/pull/new/ft
+/sqashing
+remote:
+To https://github.com/Kingcedru/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/sqashing -> ft/sqashing
+branch 'ft/sqashing' set up to track 'origin/ft/sqashing'.
+
